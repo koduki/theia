@@ -1,9 +1,15 @@
 steps:
+  - name: gcr.io/cloud-builders/gcloud
+    entrypoint: "bash"
+    args:
+      - "-c"
+      - gcloud secrets versions access --secret=DOCKERHUB_PASSWD latest > my-secret-file.txt
+  - name: "gcr.io/cloud-builders/docker"
+    entrypoint: "bash"
+    args: ["-c", "docker login --username=${_DOCKERHUB_UID} --password=$(cat my-secret-file.txt)"]
   - name: 'gcr.io/cloud-builders/docker'
     args: 
       - 'build'
       - '-t'
-      - 'gcr.io/$PROJECT_ID/theia:latest'
+      - 'koduki/theia:latest'
       - '.'
-images:
-  - 'gcr.io/$PROJECT_ID/theia:latest'
