@@ -27,4 +27,4 @@ WORKDIR /home/theia
 ADD ./package.json package.json
 RUN yarn && yarn theia build
 
-CMD ["yarn", "theia" "start", "/home/project", "--hostname 0.0.0.0", "--port", "3000"]
+CMD ["yarn", "theia","start", "/home/project", "--hostname", "0.0.0.0", "--port", "3000"]
