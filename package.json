@@ -30,8 +30,7 @@
         "@theia/preview": "next",
         "@theia/search-in-workspace": "next",
         "@theia/terminal": "next",
-        "@theia/vsx-registry": "next",
-	"@theia/java": "next"
+        "@theia/vsx-registry": "next"
     },
     "devDependencies": {
         "@theia/cli": "next"
