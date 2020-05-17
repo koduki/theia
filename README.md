@@ -40,6 +40,7 @@ $  gcloud compute start-iap-tunnel ins-theia 3000 --local-host-port=localhost:30
 
 You can also refre this document to deploy GCP.
 - https://qiita.com/koduki/items/1530ca0a71d7f18b2064
+- https://qiita.com/koduki/items/5cf028d147777e3268fc
 
 ## Cloud Build
 
